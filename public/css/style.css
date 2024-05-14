@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: auto;
+    min-height: 100dvh;
+    background-color: #171718;
+    color: #b5b6ad;
+}
+
+/* nav Section */
+
+.nav {
+    display: flex;
+    width: auto;
+    height: 50px;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    gap: 4rem;
+    background-color: #1c1c1d;
+    border-bottom: 0.5px solid #5b5b5e;
+    box-shadow: 2px 1px 1px 2px #2b2b2c, 1px 1px 1px 1px #2b2b2c;
+}
+
+.nav .navLogo a {
+    text-decoration: none;
+    color: #b8b3ad;
+    font-size: 1.65rem;
+    font-weight: 900;
+    font-family: serif;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    column-gap: 1.6rem;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #999692;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, serif;
+}
+
+/* Home Section */
+
+.container {
+    width: 95%;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
+}
+
+.container .row h2 {
+    padding-bottom: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.container .row p {
+    margin-top: 0.5rem;
+    text-align: justify;
+    width: 95%;
+    margin-left: 2rem;
+}
+
+/* Login & rs Page */
+
+.formdec {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    row-gap: 1.5rem;
+}
+
+.formdec label {
+    display: none;
+}
+
+
+.form-control {
+    margin-top: 0.25rem;
+    display: block;
+    width: 250px;
+    height: 35px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #5b5b5e;
+    color: #b8b3ad;
+}
+
+::placeholder {
+    color: #b8b3ad;
+}
+
+.form-control:focus {
+    color: #b8b3ad;
+}
+
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover,
+.form-control:-webkit-autofill:focus,
+.form-control:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #171718 inset !important;
+    -webkit-text-fill-color: #b8b3ad;
+}
+
+.textarea-control {
+    margin-top: 0.25rem;
+    display: block;
+    width: 250px;
+    height: 80px;
+    background-color: transparent;
+    outline: none;
+    color: #b8b3ad;
+}
+
+.textarea-control::placeholder {
+    text-indent: 0.5rem;
+}
+
+.formbtn {
+    margin-right: 8rem;
+    background-color: black;
+    color: goldenrod;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+/* other pages */
+
+.decoration {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+    color: #b8b3ad;
+}
+
+.decoration h5 {
+    margin-left: 2rem;
+    margin-top: 0.25rem;
+}
+
+.decoration .user-detail {
+    margin-top: 2rem;
+}
+
+.decoration .user-detail p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #948bf3;
+}
+
+.edit {
+    display: flex;
+    margin-top: 2.5rem;
+    justify-content: space-around;
+}
+
+.edit button {
+    width: 120px;
+    height: 35px;
+    background-color: black;
+    color: goldenrod;
+    border: none;
+    outline: none;
+}
+
+i {
+    margin-right: 5px;
+}
+
+.logout button {
+    width: 120px;
+    height: 35px;
+    background-color: black;
+    color: goldenrod;
+    border: none;
+    outline: none;
+}
+
+
+/* edit page */
+
+.searchdec {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    row-gap: 0.85rem;
+}
+
+.searchbox {
+    margin-top: 0.25rem;
+    display: block;
+    width: 400px;
+    height: 35px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #5b5b5e;
+    color: #b8b3ad;
+}
+
+.searchbox-control {
+    margin-top: 0.25rem;
+    display: block;
+    width: 400px;
+    height: 80px;
+    background-color: transparent;
+    outline: none;
+    color: #b8b3ad;
+}
+
+.edit-btn {
+    display: flex;
+    gap: 5rem;
+}
+
+.edit-btn button {
+    background-color: black;
+    color: goldenrod;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}

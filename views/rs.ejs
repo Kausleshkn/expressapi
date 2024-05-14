@@ -1,0 +1,42 @@
+<%- include("./partials/header.ejs") %>
+    <%- include("./partials/nav.ejs") %>
+
+        <div class="container">
+            <div class="row">
+                <h2>Ragistration Page</h2>
+                <hr>
+
+                <form method="post" class="formdec">
+
+                    <div>
+                        <label for="text">Your Name:</label>
+                        <input type="text" class="form-control" placeholder="Enter Your Name" id="name" name="name" required="true" maxlength="25">
+                    </div>
+
+                    <div>
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" placeholder="Enter email" id="email" name="email" required="true">
+                    </div>
+
+                    <div>
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" placeholder="Enter Password" id="pwd" name="pwd" required="true" maxlength="25" minlength="5">
+                    </div>
+
+                    <div>
+                        <label for="ph">Phone:</label>
+                        <input type="number" class="form-control" placeholder="Enter Phone no." id="ph" name="phone" required="true">
+                    </div>
+
+                    <div>
+                        <label>Massage:</label>
+                        <textarea placeholder='Enter Your Concern....' rows="4" cols="50" name="msg" class="textarea-control" required="true"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn formbtn">Submit query</button>
+                </form>
+
+            </div>
+        </div>
+
+        <%- include("./partials/footer.ejs") %>

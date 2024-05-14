@@ -1,0 +1,30 @@
+<%- include("./partials/header.ejs") %>
+    <%- include("./partials/nav.ejs") %>
+
+        <p id="changeAlert-msg" style="font-weight: bolder; color:#b8b3ad; text-align: center;margin-top: 4rem;"></p>
+
+        <%- include("./partials/footer.ejs") %>
+
+
+
+            <script>
+                //  window.history.back();
+                //  document.location.replace(document.referrer);
+
+                let alertText = document.getElementById("changeAlert-msg");
+                let alertMsg = "<%= nodata %>";
+
+                if(alertMsg.includes("!")){
+
+                    alertText.innerHTML = ` ${alertMsg} <a href='/ragistration'>Register Here</a> to login`; 
+
+                }else if(alertMsg.includes("*")){
+
+                    alertText.innerHTML = ` ${alertMsg} <a href="/login">login again</a> to check`;
+
+                }else{
+                    alertText.textContent = alertMsg;
+                }
+
+
+            </script>

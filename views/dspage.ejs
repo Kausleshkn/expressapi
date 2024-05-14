@@ -1,0 +1,62 @@
+<%- include("./partials/header.ejs") %>
+    <%- include("./partials/nav.ejs") %>
+
+        <div class="container">
+            <div class="row">
+                <h2>Dashboard Page</h2>
+                <hr>
+                <div class="decoration">
+                    <div>
+                        <p>Welcome to Dashboard
+                        </p>
+
+                        <!-- <% for(let val in matchData){%>
+                    <h4>Your Saved Detail in database is:</h4>
+                    <p> your name is <%= matchData[val] %>
+                    </p>
+                    <p> your email is <%= matchData[val] %>
+                    </p>
+                    <p> your password is <%= matchData[val] %>
+                    </p>
+                    <p> your phone number is <%= matchData[val] %>
+                    </p>
+                    <p> your quiry is <%= matchData[val] %>
+                    </p>
+                    <% } %> -->
+
+                        <h5>Your Saved Detail in database is:</h5>
+
+                        <div class="user-detail">
+                            <p> your name is : <%= matchData.name %>
+                            </p>
+                            <p> your email is : <%= matchData.email %>
+                            </p>
+                            <p> your password is : <%= matchData.pwd %>
+                            </p>
+                            <p> your phone number is : <%= matchData.phone %>
+                            </p>
+                            <p> your quiry is : "<%= matchData.msg %>"
+                            </p>
+                        </div>
+
+                        <div class="edit">
+                            <form action="/edit/<%= matchData._id %>" method="get">
+                                <button type="submit"><i class="fas fa-pen-square text-info"></i>Edit Details</button>
+                            </form>
+
+                            <form action="/delete/<%= matchData._id %>" method="post">
+                                <button type="submit"><i class="fas fa-trash text-danger"></i>Delete Details</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="logout">
+                        <form action="/logout/<%= matchData._id %>" method="get">
+                            <button type="submit"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include("./partials/footer.ejs") %>

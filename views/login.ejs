@@ -1,0 +1,36 @@
+<%- include("./partials/header.ejs") %>
+    <%- include("./partials/nav.ejs") %>
+
+        <div class="container">
+            <div class="row">
+                <h2>Login Page</h2>
+                <hr>
+
+                <form method="post" class="formdec" id="loginForm">
+                    <div class="">
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" placeholder="Enter email" id="email" name="email">
+                    </div>
+                
+                    <div class="">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" placeholder="Enter Password" id="pwd" name="pwd">
+                    </div>
+                
+                    <button type="submit" class="formbtn">Login</button>
+                </form>
+
+            </div>
+        </div>
+
+        <%- include("./partials/footer.ejs") %>
+
+        <script>
+            function clearForm() {
+              document.getElementById('loginForm').reset();
+            }
+            
+            window.addEventListener('load', clearForm);
+            window.addEventListener('pageshow', clearForm);
+            
+            </script>

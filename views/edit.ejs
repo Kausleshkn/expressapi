@@ -1,0 +1,61 @@
+<%- include("./partials/header.ejs") %>
+    <%- include("./partials/nav.ejs") %>
+
+        <div class="container">
+            <div class="row">
+                <h2>Update your Data</h2>
+                <hr>
+
+                <form action="/update/<%= userData._id %>" method="post" class="searchdec">
+
+                    <div>
+                        <label for="text">Your Name:</label>
+                        <input type="text" class="searchbox" placeholder="Enter Your Name" id="name" name="name"
+                            value="<%= userData.name %>" required="true" maxlength="25">
+                    </div>
+
+                    <div>
+                        <label for="email">Email address:</label>
+                        <input type="email" class="searchbox" placeholder="Enter email" id="email" name="email"
+                            value="<%= userData.email %>" required="true">
+                    </div>
+
+                    <div>
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="searchbox" placeholder="Enter Password" id="pwd" name="pwd"
+                            value="<%= decryptedData %>" required="true" maxlength="25" minlength="5">
+                    </div>
+
+                    <div>
+                        <label for="ph">Phone:</label>
+                        <input type="number" class="searchbox" placeholder="Enter Phone no." id="ph" name="phone"
+                            value="<%= userData.phone %>" required="true">
+                    </div>
+
+                    <div>
+                        <label>Massage:</label>
+                        <textarea placeholder='Enter Your Concern....' name="msg" id="note"
+                            class="searchbox-control" required="true"><%= userData.msg %></textarea>
+                    </div>
+
+                    <div class="edit-btn">
+                        <button type="submit" name="signin" value="Update_btn">Update query</button>
+                        <button type="submit" name="signin" value="Ds_btn" formaction="/login">Back to
+                            Dashboard</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <script>
+            let s_height = document.getElementById('note').scrollHeight;
+
+            if (s_height <= 80) {
+                document.getElementById('note').setAttribute('style', `height:${s_height / 15}rem;width: 25rem;`);
+            } else {
+                document.getElementById('note').setAttribute('style', `height:${s_height / 25}rem;width: 25rem;`);
+            }
+        </script>
+
+        <%- include("./partials/footer.ejs") %>
