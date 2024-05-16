@@ -17,7 +17,7 @@ const __dirname = dirname(__filename);
 const app = express();
 const port = process.env.PORT || 5000;
 // const dataBase_URL = process.env.dataBase_URL || 'mongodb://127.0.0.1:27017';
-const dataBase_URL = process.env.DATABASE_URL || "mongodb+srv://kausleshjst:WgnVZPccTnkRM5Zp@cluster0.tv7xeav.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const dataBase_URL = process.env.DATABASE_URL;
 
 // using middleware for getting html form data
 app.use(express.urlencoded({ extended: false }));
